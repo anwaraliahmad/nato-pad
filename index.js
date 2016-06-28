@@ -36,6 +36,8 @@ function natoPad(str) {
  	for (var i = 0; i < str.length; i++) {
 		if (natoAlphabet[str.substring(i,i+1)]) 
 			nato += natoAlphabet[str.substring(i, i+1)] + " ";
+		else
+			nato += str.substring(i, i+1);
 	}	
 	return nato;
 }
