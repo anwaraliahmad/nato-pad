@@ -1,6 +1,7 @@
 "use strict";
 module.exports = natoPad;
 
+//All the NATO codes.
 var natoAlphabet = {
 	a: "ALPHA",
 	b: "BRAVO",
@@ -34,10 +35,15 @@ function natoPad(str) {
 	var nato = "";
 	str = str.toLowerCase();
  	for (var i = 0; i < str.length; i++) {
-		if (natoAlphabet[str.substring(i,i+1)]) 
-			nato += natoAlphabet[str.substring(i, i+1)] + " ";
-		else
-			nato += str.substring(i, i+1);
-	}	
+		if (natoAlphabet[str.charAt(i)]){
+			if (natoAlphabet[str.charAt(i+1)])
+				nato += natoAlphabet[str.charAt(i)] + " ";
+			else
+				nato += natoAlphabet[str.charAt(i)];
+		}
+		else {
+			nato += str.charAt(i);
+		}
+	}
 	return nato;
 }
