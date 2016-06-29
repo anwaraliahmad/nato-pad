@@ -1,6 +1,8 @@
 # nato-pad
 🇺🇸Make your strings combat-ready🎖
 
+[![Build Status](https://travis-ci.org/anwaraliahmad/nato-pad.svg?branch=master)](https://travis-ci.org/anwaraliahmad/nato-pad)
+
 ## Installation 
 
 ```
